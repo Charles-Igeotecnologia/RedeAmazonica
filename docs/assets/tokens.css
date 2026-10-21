@@ -1,0 +1,21 @@
+:root{
+  --bg:#061619;
+  --bg-2:#0a1e22;
+  --surface:#10262b;
+  --surface-2:#173137;
+  --surface-3:#1c3b40;
+  --text:#f3f4ec;
+  --text-2:#b9cbc9;
+  --muted:#91adaa;
+  --accent:#48c7d8;
+  --accent-hi:#8ae5eb;
+  --data:#8de0be;
+  --sand:#e3c393;
+  --font-display:"Archivo",system-ui,sans-serif;
+  --font-body:"IBM Plex Sans",system-ui,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,monospace;
+  --line:rgba(181,218,211,.17);
+  --line-strong:rgba(181,218,211,.3);
+  --wrap:1440px;
+  --gutter:clamp(22px,4.5vw,72px);
+}

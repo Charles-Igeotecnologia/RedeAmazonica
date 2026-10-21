@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#061619">
+  <meta name="description" content="Portal de entregas do Rádio TV do Amazonas LTDA: atlas dos lotes, catálogo documental e acesso às pastas técnicas.">
+  <title>Rádio TV do Amazonas LTDA · Portal de entregas</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/vendor/leaflet.css">
+  <link rel="stylesheet" href="./assets/tokens.css">
+  <link rel="stylesheet" href="./assets/portal.css">
+  <link rel="stylesheet" href="./assets/documents.css">
+  <script defer src="./assets/vendor/leaflet.js"></script>
+  <script defer src="./data/lotes.js"></script>
+  <script defer src="./assets/catalog.js"></script>
+  <script defer src="./assets/app.js"></script>
+  <script defer src="./data/documents.js"></script>
+  <script defer src="./assets/documents.js"></script>
+</head>
+<body>
+<a class="skip" href="#principal">Pular para o conteúdo</a>
+
+<header class="header"><div class="wrap header-inner">
+  <a class="brand portal-brand" href="#inicio" aria-label="Território Digital por Igeotecnologia — início"><img src="./assets/brand/logo-territorio-digital.svg" alt="Território Digital" width="830" height="285"><span>por IGEOTECNOLOGIA</span></a>
+  <nav aria-label="Navegação principal"><a href="#atlas">Atlas</a><a href="#catalogo">Entregas</a><a href="#documentos">Notas técnicas e cartas</a><a href="#sobre">Sobre o projeto</a></nav>
+</div></header>
+<main id="principal">
+  <section id="inicio" class="hero wrap">
+    <div><p class="eyebrow">Acervo territorial <span>/</span> Manaus, AM</p><h1 class="project-title">Rádio TV do <em>Amazonas LTDA</em></h1><p class="project-subtitle">Acervo dos dados georreferenciados dos imóveis.</p><p class="intro">Explore o atlas dos lotes, consulte os documentos técnicos e acesse os dados do projeto em um só lugar.</p><div class="actions"><a href="#atlas" class="button primary">Explorar o atlas <span aria-hidden="true">↘</span></a><a href="#catalogo" class="text-link">Consultar entregas <span aria-hidden="true">→</span></a></div></div>
+    <aside class="project-index" aria-label="Documentação e resumo do projeto"><button class="scenario-callout" type="button" data-open-document="situacao"><span class="eyebrow">Acervo técnico / Cinco documentos</span><strong>Notas técnicas e <em>cenários documentados.</em></strong><span class="callout-description">Consulte as notas do projeto e explore as cartas de situação e localização dos imóveis.</span><span class="callout-action">Abrir ambiente de visualização <span aria-hidden="true">↗</span></span></button><div class="index-line"><span>Lotes cadastrados</span><strong id="total">—</strong></div><div class="index-line"><span>Marcados como concluídos</span><strong id="concluidos">—</strong></div><div class="index-line"><span>Parcial / confrontante</span><strong><span id="parciais">—</span> / <span id="confrontantes">—</span></strong></div><p class="caption">Situações transcritas do atlas de origem. Não representam aceite documental.</p></aside>
+  </section>
+
+  <section id="atlas" class="wrap section atlas-section" aria-labelledby="atlas-title">
+    <div class="section-head"><div><p class="eyebrow"><span class="section-no">01</span> Leitura territorial</p><h2 id="atlas-title">Um mapa para <em>se orientar.</em></h2></div><p>Selecione um lote no mapa ou na lista para consultar seus documentos relacionados.</p></div>
+    <div class="atlas-shell">
+      <div class="map-column"><div class="map-toolbar"><div class="base-switch" role="group" aria-label="Mapa base"><button id="base-satelite" type="button" aria-pressed="true">Satélite</button><button id="base-ruas" type="button" aria-pressed="false">Ruas</button></div><button id="enquadrar" class="fit-button" type="button">Ver todos os lotes <span aria-hidden="true">↗</span></button></div><div id="map" role="region" aria-label="Atlas interativo dos cinco lotes"></div><div class="map-key"><span><i></i>Lote levantado</span><span><i class="neighbor"></i>Confrontante</span><span>Contornos preliminares</span></div><p id="map-message" class="map-message" role="status" hidden></p></div>
+      <aside class="lot-panel" aria-labelledby="lot-panel-title"><div class="panel-heading"><p class="eyebrow">Índice territorial</p><h3 id="lot-panel-title">Selecione um lote</h3></div><div id="lot-list"></div><div class="selected-summary" id="selected-summary" aria-live="polite"><span class="eyebrow">Atlas do projeto</span><p>Cinco lotes, suas referências de campo e o acesso às pastas técnicas.</p><a href="#catalogo" class="text-link">Ver catálogo completo →</a></div></aside>
+    </div>
+    <details class="technical-note"><summary>Sobre os contornos e a referência espacial</summary><p>Os contornos são preliminares, montados a partir das coordenadas dos marcos de implantação, na ordem dos segmentos. Os pontos são identificados no HTML de origem como centroides. Referência declarada: SIRGAS 2000 (EPSG:4674), convertido de UTM 20S (EPSG:31980).</p><p>Para uso jurídico ou cadastral, prevalecem o memorial descritivo e a planta assinada pelo responsável técnico. A fonte geométrica foi preservada nesta prévia, sem nova conferência com os arquivos de campo.</p></details>
+  </section>
+
+  <section id="catalogo" class="catalog-section section" aria-labelledby="catalog-title"><div class="wrap">
+    <div class="section-head"><div><p class="eyebrow"><span class="section-no">02</span> Catálogo de entregas</p><h2 id="catalog-title">Encontre o lote.<br><em>Acesse os documentos.</em></h2></div><p>Consulte as relações documentais do atlas. O acesso leva à pasta do lote no Google Drive.</p></div>
+    <form id="filters" class="filters" role="search" aria-label="Pesquisar entregas"><div class="search-field"><label for="search">Buscar no catálogo</label><input id="search" type="search" placeholder="Lote, nome, marco ou documento…" autocomplete="off"></div><div><label for="status">Situação no atlas</label><select id="status"><option value="all">Todas as situações</option><option value="ok">Concluído</option><option value="soon">Parcial</option><option value="info">Confrontante</option></select></div><div><label for="category">Documento relacionado</label><select id="category"><option value="all">Todos os tipos</option><option value="coordenadas">Levantamento e coordenadas</option><option value="segmentos">Segmentos e confrontantes</option><option value="confrontacao">Marcos de confrontação</option></select></div><button type="reset" class="reset">Limpar filtros ↺</button></form>
+    <div class="result-bar"><p id="result-count" role="status" aria-live="polite"></p><p id="lot-filter" hidden></p></div>
+    <div id="catalog-grid" class="catalog-grid"></div>
+    <div id="empty" class="empty" hidden><h3>Nenhum lote encontrado</h3><p>Experimente outro nome, número ou tipo de documento.</p><button type="button" id="empty-reset" class="button">Limpar filtros</button></div>
+    <p class="catalog-note">Os nomes de documentos foram preservados do atlas original. Formatos, revisões, datas e disponibilidade dos arquivos ainda precisam de conferência nas pastas.</p>
+  </div></section>
+
+  <section id="documentos" class="wrap section" aria-labelledby="docs-title">
+    <div class="section-head"><div><p class="eyebrow"><span class="section-no">03</span> Acervo técnico / Leitura interativa</p><h2 id="docs-title">Notas técnicas.<br><em>Cenários documentados.</em></h2></div><p>Consulte as cartas e as notas do projeto aqui no portal. Amplie os detalhes ou abra o PDF original para leitura e pesquisa de texto.</p></div>
+    <div class="document-reader" id="document-reader">
+      <aside class="document-sidebar" aria-label="Documentos disponíveis"><p class="eyebrow">Acervo do projeto</p><div id="document-list"></div></aside>
+      <div class="reader-main"><div class="reader-heading"><div><p class="doc-kicker" id="document-kind"></p><h3 id="document-title"></h3><p id="document-subtitle"></p></div><div class="pdf-actions"><a id="pdf-open" class="text-link" target="_blank" rel="noopener">Abrir PDF ↗</a><a id="pdf-download" class="text-link" download>Baixar PDF ↓</a></div></div>
+      <div class="reader-toolbar" aria-label="Controles de leitura"><div class="reader-pages"><button type="button" id="page-prev" aria-label="Página anterior">←</button><label for="page-select" class="visually-hidden">Página do documento</label><select id="page-select"></select><span id="page-total"></span><button type="button" id="page-next" aria-label="Próxima página">→</button></div><div class="reader-zoom"><button type="button" id="zoom-out" aria-label="Diminuir zoom">−</button><output id="zoom-value" aria-live="polite">100%</output><button type="button" id="zoom-in" aria-label="Aumentar zoom">+</button><button type="button" id="zoom-reset">Ajustar largura</button></div><button type="button" id="reader-fullscreen">Tela cheia ↗</button></div>
+      <div class="document-stage" id="document-stage" tabindex="0" role="region" aria-label="Página ampliável; use as barras de rolagem para explorar os detalhes"><img id="page-image" alt=""><p id="document-load" role="status">Carregando documento…</p></div><p class="reader-hint" id="reader-status" role="status">Use o zoom e a rolagem para explorar a página. O PDF original permanece disponível acima.</p></div>
+    </div>
+    <details class="document-transcript"><summary>Leitura em texto da página atual</summary><p>Transcrição automática de apoio. A composição cartográfica e as tabelas devem ser conferidas no PDF.</p><pre id="page-text"></pre></details>
+    <div class="general-docs"><article><span class="doc-kicker">Fontes documentais</span><h3>Notas técnicas e cartas</h3><p>As Notas 01 e 02 foram mantidas como documentos distintos, conforme os arquivos fornecidos. O acervo reúne 5 PDFs e 22 páginas.</p><a class="text-link" href="https://drive.google.com/drive/folders/1bcyJ7bjRJP7bcxf6IAXbxFwGPOyfBJd5" target="_blank" rel="noopener">Abrir pasta de notas técnicas ↗</a></article><article><span class="doc-kicker">Acervo compartilhado</span><h3>Central de dados do projeto</h3><p>Acesse também a pasta geral. A visualização dos arquivos no Drive depende das permissões de compartilhamento.</p><a class="text-link" href="https://drive.google.com/drive/folders/16lrf5z_YNR_qUJHNJP_eufyZKOzmR17m?usp=sharing" target="_blank" rel="noopener">Abrir pasta geral ↗</a></article></div>
+  </section>
+
+  <section id="sobre" class="about-section section"><div class="wrap about-grid"><div><p class="eyebrow"><span class="section-no">04</span> Responsabilidade e fontes</p><h2>Informação técnica.<br><em>Origem identificada.</em></h2><p>O portal serve à localização dos lotes e ao acesso à documentação. Não substitui memorial descritivo, matrícula ou planta georreferenciada oficial.</p></div><div class="team"><article><span class="doc-kicker">Geotecnologia</span><h3>Charles Silva de Araujo</h3><p>Geógrafo · CREA-AM 19.430 · AM/RN<br>Igeotecnologia · Manaus, AM</p></article><article><span class="doc-kicker">Engenharia florestal</span><h3>Cleber Mota Damasceno</h3><p>Engenheiro Florestal · CREA-AM 2959-D</p></article></div></div></section>
+</main>
+<footer class="wrap footer"><div><strong>Igeotecnologia Soluções Geoespaciais e Engenharia Ltda.</strong><p>CNPJ 54.678.405/0001-02 · Manaus, AM</p><a href="mailto:charles@igeotecnologia.com">charles@igeotecnologia.com</a></div><p>Rádio TV do Amazonas LTDA · Portal de entregas<br>Versão 01 · 21/10/2026<br>Atlas de referência, sem valor cadastral.</p></footer>
+<noscript><p class="wrap">Ative o JavaScript para usar o atlas e o catálogo. As pastas gerais continuam disponíveis nos links desta página.</p></noscript>
+</body>
+</html>
