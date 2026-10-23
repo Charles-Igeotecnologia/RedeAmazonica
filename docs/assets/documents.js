@@ -48,7 +48,7 @@
     $('document-kind').textContent = `${current.kind} / PDF / ${(current.bytes / 1000000).toFixed(1).replace('.', ',')} MB`;
     $('pdf-open').href = current.file;
     $('pdf-download').href = current.file;
-    $('pdf-download').download = current.file.split('/').pop();
+    $('pdf-download').download = current.file.split('?')[0].split('/').pop();
     $('page-select').replaceChildren(...Array.from({length: current.pageCount}, (_, i) => {
       const option = document.createElement('option');option.value = String(i + 1);option.textContent = String(i + 1);return option;
     }));

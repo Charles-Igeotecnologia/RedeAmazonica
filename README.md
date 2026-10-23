@@ -8,7 +8,7 @@ Endereço: https://charles-igeotecnologia.github.io/RedeAmazonica/
 
 - Atlas de cinco lotes com os pontos e contornos preliminares preservados do HTML de origem.
 - Catálogo com busca e filtros e acesso às pastas dos lotes no Drive.
-- Cinco PDFs e 22 páginas: cartas de situação e localização, Notas Técnicas 01 e 02 e Nota Técnica Executiva.
+- Cinco PDFs e 29 páginas: cartas de situação e localização, Notas Técnicas 01 e 02 e Nota Técnica Executiva.
 - Leitor de documentos com seleção de páginas, zoom, tela cheia e acesso ao PDF original.
 
 As situações exibidas no atlas são transcritas da origem e não comprovam aceite ou entrega documental. Para uso jurídico ou cadastral, prevalecem os documentos técnicos pertinentes. As duas notas de procedimentos foram mantidas separadas, sem inferir substituição ou vigência.
@@ -32,3 +32,5 @@ Os lotes estão em `docs/data/lotes.js`; os documentos, em `docs/data/documents.
 O HTML original foi preservado fora deste repositório, na pasta de trabalho do projeto. Nenhum arquivo de análise local, caminho pessoal ou credencial foi incluído no pacote público.
 
 Publicação inicial: 21/10/2026. Para reverter uma revisão posterior, reverta o commit correspondente e publique novamente. Dependências: Leaflet 1.9.4, com licença em `docs/assets/vendor/LICENSE-Leaflet`.
+
+Atualização documental de 22/10/2026: cinco PDFs substituídos por cópias da base atual; páginas de leitura regeneradas e URLs versionadas por SHA-256 para atualização de cache. A carta de situação apresenta matrícula 24.449 para o lote 96, conforme a base fornecida.
